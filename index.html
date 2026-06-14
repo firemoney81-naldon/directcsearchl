@@ -1,23 +1,550 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://example.com/kia-ev-insurance-ranking"
+      },
+      "headline": "기아 EV 자동차 보험 가입 추천 순위 2026 분석: 모델별 평균 견적과 저렴한곳 비교",
+      "image": [
+        "https://example.com/kia-ev-insurance-main.jpg"
+      ],
+      "datePublished": "2026-06-14",
+      "dateModified": "2026-06-14",
+      "author": {
+        "@type": "Organization",
+        "name": "전기차 자동차보험 분석 연구소"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "에코 카 인슈어런스",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/logo.png"
+        }
+      },
+      "description": "2026년 최신 기준 기아 EV3, EV4, EV5, EV6, EV9, 니로 EV, 레이 EV 등 기아자동차 전기차 라인업의 보험료 평균 금액을 비교하고, 손해보험사별 가입 순위 및 신규 혜택, 사은품 정보를 제공합니다."
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #0d2c54;
+            --secondary-color: #c4dbf6;
+            --accent-color: #e28413;
+            --text-color: #2b2d42;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+            --border-color: #e1e8ed;
+        }
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            line-height: 1.8; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-color); 
+            background-color: var(--white); 
+        }
+        header { 
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1b4965 100%); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 70px 20px 50px; 
+            border-bottom: 5px solid var(--accent-color); 
+        }
+        h1 { 
+            font-size: 2.3em; 
+            margin-bottom: 15px; 
+            font-weight: 700; 
+            color: var(--white); 
+            letter-spacing: -0.5px;
+        }
+        h2 { 
+            font-size: 1.7em; 
+            color: var(--primary-color); 
+            border-left: 5px solid var(--accent-color); 
+            padding-left: 15px; 
+            margin-top: 45px; 
+            margin-bottom: 20px;
+        }
+        h3 { 
+            font-size: 1.3em; 
+            color: #1b4965; 
+            margin-top: 30px; 
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+        section { 
+            padding: 30px 20px; 
+            max-width: 1050px; 
+            margin: auto; 
+        }
+        .hero-text { 
+            font-size: 1.15em; 
+            font-weight: 300; 
+            max-width: 800px;
+            margin: 0 auto 25px;
+            color: #e0f2fe;
+        }
+        .cta-box { 
+            background-color: var(--light-bg); 
+            padding: 35px; 
+            border-radius: 15px; 
+            margin: 40px 0; 
+            text-align: center; 
+            border: 1px solid var(--secondary-color);
+        }
+        .cta-btn { 
+            display: inline-block; 
+            padding: 16px 35px; 
+            background-color: var(--accent-color); 
+            color: var(--white); 
+            font-size: 1.1em; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            transition: all 0.3s ease; 
+            border: none; 
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .cta-btn:hover { 
+            background-color: #c9710f; 
+            transform: translateY(-2px);
+        }
+        .content-area { 
+            max-width: 950px; 
+            margin: auto; 
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: separate; 
+            border-spacing: 0;
+            margin: 30px 0; 
+            font-size: 0.95em; 
+            text-align: left; 
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        table th, table td { 
+            padding: 15px 20px; 
+        }
+        table th { 
+            background-color: var(--primary-color); 
+            color: var(--white); 
+            font-weight: 700; 
+            text-align: center; 
+        }
+        table td {
+            border-bottom: 1px solid var(--border-color);
+        }
+        table tr:last-child td {
+            border-bottom: none;
+        }
+        table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        
+        .input-group { 
+            background-color: #f8fafc; 
+            padding: 30px; 
+            border-radius: 12px; 
+            margin-top: 35px; 
+            border: 1px solid #e2e8f0;
+        }
+        .input-group label { 
+            display: block; 
+            margin-bottom: 10px; 
+            font-weight: 700; 
+            color: var(--primary-color); 
+        }
+        .input-group input[type="text"], 
+        .input-group input[type="number"], 
+        .input-group select { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            background-color: var(--white);
+        }
+        .input-group textarea { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            height: 120px; 
+            background-color: var(--white);
+        }
+        
+        .external-links {
+            margin: 30px 0;
+        }
+        .external-links a { 
+            display: block; 
+            margin-bottom: 12px; 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-weight: 500; 
+            padding: 12px 18px; 
+            background-color: #f1f5f9; 
+            border-radius: 6px; 
+            transition: background 0.2s ease; 
+            border-left: 4px solid var(--primary-color);
+        }
+        .external-links a:hover { 
+            background-color: var(--secondary-color); 
+        }
+
+        .highlight-box {
+            background-color: #fef3c7;
+            border-left: 5px solid #d97706;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .result-box {
+            background-color: #ecfdf5;
+            border: 1px solid #10b981;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        footer { 
+            background-color: #1e293b; 
+            color: #94a3b8; 
+            text-align: center; 
+            padding: 30px 20px; 
+            font-size: 0.85em; 
+            margin-top: 60px; 
+            border-top: 3px solid var(--accent-color);
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>기아 EV 자동차 보험 가입 추천 순위 핵심 분석 가이드</h1>
+        <p class="hero-text">전기차 시대를 위한 완벽한 지침서: EV3부터 EV9까지 모델별 평균 비용 분석과 합리적인 선택을 돕는 유용한 팁을 제공합니다.</p>
+        <div class="cta-box" style="background: rgba(255,255,255,0.1); border: none; padding: 20px; margin: 10px auto; max-width: 600px;">
+            <p style="color: #f0f9ff; margin-bottom: 15px;">나에게 가장 잘 맞는 가입 순위와 예상 혜택을 즉시 파악할 수 있습니다.</p>
+            <a href="#insurance-calculator" class="cta-btn">내 차량 조건별 견적 시뮬레이터로 이동</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="content-area">
+            
+            <h2>1. 기아 EV 자동차 보험 가입의 중요성과 2026년 트렌드</h2>
+            <p>전기차 보급률이 급격하게 상승한 오늘날, 기아자동차의 대표적인 친환경 세그먼트인 전기차 라인업은 합리적인 경제성과 세련된 상품성으로 대중의 뜨거운 관심을 이끌어내고 있습니다. 하지만 신차 계약 단계에서 놓치기 쉬운 핵심 요소 중 하나가 바로 기아 EV 자동차 보험 가입 추천 순위와 정확한 예상 지출을 미리 파악하는 작업입니다. 전기 차량은 일반 내연기관 모델과 비교해 복합적인 하드웨어 차이점과 차체 하부 고전압 배터리의 파손 리스크로 인해 요율 책정 구조가 다른 양상을 띠고 있습니다.</p>
+            
+            <p>2026년 현재 손해보험 업계는 자차담보 내 전기차 전용 특별약관의 보장 한도를 대폭 확대하는 추세입니다. 배터리 교체 비용의 현실화와 초고속 충전 중 화재 손해, 그리고 전용 부품의 조달 지연에 따른 렌트 비용 지원 한도 확대 등이 주요 쟁점입니다. 이에 따라 수많은 소유주들은 네이버 동호회나 다음 카페, 보배드림, 디시인사이드 전기차 갤러리, 펨코 등 다양한 커뮤니티에서 실시간 의견과 내돈내산 가입 후기를 면밀히 검색하며 합리적으로 유지할 수 있는 싼곳 혹은 저렴한곳 찾기에 몰두하고 있습니다.</p>
+
+            <div class="highlight-box">
+                가장 현명한 전기차 특약 준비는 단순 최저가만 쫓는 것이 아니라, 배터리 전손 사고 발생 시 감가상각 금액을 적절히 보상해주는 특약이 포함되었는지를 면밀하게 따져보는 일에서 시작합니다.
+            </div>
+
+            <h2>2. 기아 EV 라인업 주요 모델별 특징과 보험요율 차이점</h2>
+            <p>기아의 전기 세그먼트는 도심형 소형 해치백부터 초고용량 배터리를 탑재한 플래그십 패밀리 SUV까지 매우 방대한 포트폴리오를 보유하고 있습니다. 차종별 가액과 탑재 부품의 특성이 크게 달라지므로, 동일한 운전자라 할지라도 기아 EV 자동차 보험 가입 추천 순위에 적합한 주력 모델별 금액 차이가 크게 벌어질 수밖에 없습니다. 아래에서는 대표적인 33종의 파생 모델 명칭을 아우르며, 각 범주에 따른 산정 방식을 체계적으로 전해드립니다.</p>
+
+            <h3>2.1. 도심 밀착형 모델 및 준중형 패밀리카 라인업</h3>
+            <p>대표적으로 많은 사랑을 받는 기아 EV3 스탠다드, 기아 EV3 롱레인지, 그리고 곧 시장 확대를 예고한 기아 EV4 세단 예정 모델과 중소형 패밀리 타깃의 기아 EV5 준중형 SUV 모델은 비교적 낮은 신차 출고가와 범용화된 전용 부품 단가 덕분에 연간 평균 예산이 합리적인 축에 속합니다. 이와 유사하게 안정된 가성비로 오랫동안 스테디셀러 자리를 지켜온 기아 니로 EV 1세대, 기아 니로 EV 2세대 에어, 기아 니로 EV 2세대 어스는 배터리 안전 보증율이 준수하게 책정되어 있습니다. 비즈니스 영역에서 택시 및 도심 물류용으로 도입된 기아 니로 플러스 에어와 기아 니로 플러스 어스 또한 운전 경력이 우수한 운전자의 경우 납입 부담을 대폭 경감할 수 있다는 장점이 존재합니다.</p>
+
+            <h3>2.2. 고성능 드라이빙과 플래그십 패밀리 세그먼트</h3>
+            <p>반면, 고전압 대용량 셀을 적용하여 뛰어난 퍼포먼스를 발휘하는 모델들은 자차 담보 영역의 비용이 눈에 띄게 증가합니다. 기아 EV6 스탠다드 2WD, 기아 EV6 스탠다드 4WD를 비롯해 장거리 크루징에 최적화된 기아 EV6 롱레인지 2WD 및 기아 EV6 롱레인지 4WD는 스포츠 성향의 차량 주행 특성상 비교적 손해율이 다소 올라가기도 합니다. 고성능 스포츠 튜닝 모델인 기아 EV6 GT 모델이나 최근 대대적인 변화를 겪은 페이스리프트 모델 패키지(기아 EV6 페이스리프트 라이트, 기아 EV6 페이스리프트 에어, 기아 EV6 페이스리프트 어스, 기아 EV6 페이스리프트 GT-line)는 출고 직후 반드시 자차 가액을 꼼꼼히 연동해야 합니다.</p>
+            <p>완벽한 하이엔드 시장을 견인하는 기아 EV9 2WD 에어, 기아 EV9 2WD 어스는 물론이고 사륜구동 하이테크가 응집된 기아 EV9 4WD 에어, 기아 EV9 4WD 어스, 고급감을 배가시킨 기아 EV9 GT-line과 초고성능 스펙의 기아 EV9 GT 고성능 모델은 차량의 신품 조달 단가와 바디 프레임의 고장력 복합 스틸 구조로 인해 파손 시 수리비 부과액이 큽니다. 따라서 이러한 플래그십 모델 군은 요율 할인이 제공되는 우수 전문 설계사 채널이나 다이렉트 전용 플랫폼을 경유하여 체계적인 견적을 먼저 수집해야 자금 낭비를 막을 수 있습니다.</p>
+
+            <h3>2.3. 레저 및 경형 경량 전동화 특화 차량</h3>
+            <p>마지막으로 개성 넘치는 공간 연출을 보여주는 기아 쏘울 EV 1세대, 기아 쏘울 EV 2세대, 기아 쏘울 부스터 EV는 마니아층과 젊은 라이더들에게 지속적인 지지를 얻고 있습니다. 최근 도심형 단거리 업무용 및 장보기 차량으로 독보적인 행보를 이어가는 기아 레이 EV 1세대 및 최신형 고밀도 리튬인산철 배터리를 매칭한 신형 레이 EV 라이트, 신형 레이 EV 에어 모델은 신차 초기 부담은 줄이고 경차 혜택을 온전히 수혜받을 수 있는 장점을 발휘하지만, 전기 경차라는 카테고리의 파손 저항성 한계로 인해 사고 시 대차 비율이 높아 대물배상 가입 설정을 넉넉하게 10억 원 이상으로 맞춤 구성하는 것이 바람직합니다. 물류 이동의 든든한 동반자인 기아 봉고3 EV 초장축과 기아 봉고3 EV 특장차 역시 업무용 운송 용도로 가입 시 영업용 기준 할증 제도를 꼼꼼히 체크해두셔야 손해가 없습니다.</p>
+
+            <hr>
+
+            <h2>3. 기아 EV 주요 모델별 연간 예상 평균 보험료 비교 (2026년 기준 예측치)</h2>
+            <p>전기차 소유 희망자가 늘 마음에 두고 질문하는 단골 토픽은 "내 조건에서 실제 금액이 얼마 정도 나올 것인가?"입니다. 개개인의 무사고 연차, 등급 할인율, 주 운전자 범위 지정 상태에 따라 수십만 원의 편차가 생기게 되나, 아래의 도표는 보편적인 만 35세 일인 한정 무사고 3년차 가입 조건을 기반으로 시뮬레이션한 객관적인 기준 지표를 제시합니다.</p>
+
+            <table>
+                <caption>기아 주요 전동화 차종별 예상 평균 견적 및 부품 교체 영향 점수</caption>
+                <thead>
+                    <tr>
+                        <th>적용 모델 상세</th>
+                        <th>평균 예상 납입액 (연간/원)</th>
+                        <th>자차 전용 특약 권장 수준</th>
+                        <th>주요 장단점 및 특이사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>기아 레이 EV (신형 에어 기준)</td>
+                        <td>대략 680,000 ~ 820,000</td>
+                        <td>기본형 보장형 구성 가능</td>
+                        <td>가벼운 경형 혜택 적용되나 자차 감가가 빠름</td>
+                    </tr>
+                    <tr>
+                        <td>기아 EV3 (롱레인지 모델)</td>
+                        <td>대략 890,000 ~ 1,050,000</td>
+                        <td>배터리 전손시 신차 가액 보상 특약 필수</td>
+                        <td>엔트리 크로스오버로 합리적인 요율 책정됨</td>
+                    </tr>
+                    <tr>
+                        <td>기아 니로 EV (2세대 어스)</td>
+                        <td>대략 920,000 ~ 1,100,000</td>
+                        <td>친환경 부품 교체 추가 특약 지원</td>
+                        <td>높은 보급률로 안정적인 정비성 보유, 손해율 우수</td>
+                    </tr>
+                    <tr>
+                        <td>기아 EV6 (롱레인지 2WD)</td>
+                        <td>대략 1,120,000 ~ 1,350,000</td>
+                        <td>초과수리비 보장 한도 130퍼센트 지정 권장</td>
+                        <td>매우 대중적이나 전용 프론트 센서 파손 시 단가 높음</td>
+                    </tr>
+                    <tr>
+                        <td>기아 EV9 (4WD 어스 기준)</td>
+                        <td>대략 1,580,000 ~ 1,950,000</td>
+                        <td>배터리 전손 전액 보상 및 대물 10억 세팅</td>
+                        <td>초대형 SUV 세그먼트로 차량 가액 자체가 높아 고비용</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>위 표에 명시된 평균 데이터는 단순 참조용 수치이며 실제 인수상황과 각 다이렉트 견적 시스템의 실시간 계산에 따라 상이한 결과가 나타납니다. 특히 고가의 구동 부품 가격이 차종 가액에 연계되어 있으므로, 신차 등록 시 제공되는 혜택이나 무사고 경력이 가장 큰 감면 열쇠가 됩니다.</p>
+
+            <hr>
+
+            <h2>4. 전기차 특성에 따른 합리적인 담보 설계 노하우</h2>
+            <p>기아 EV 모델들을 운행할 때 내장된 첨단 편의 기술과 안전 사양은 사고율을 크게 경감시키는 일등 공신입니다. 이와 관련된 스마트 크루즈나 차선이탈방지 등 ADAS(첨단 운전자 보조 시스템) 가 탑재된 기아 EV 라인업은 대다수 주요 다이렉트 앱에서 장착 장치 추가 감면 혜택을 수령할 수 있습니다. 또한, 내비게이션 플랫폼인 티맵(TMAP)이나 카카오내비의 누적 안전 주행 점수가 우수할 경우 추가적인 10퍼센트에서 많게는 15퍼센트 수준의 연계 감면이 중복 지원되므로 반드시 평소에 안전 습관을 준수하시는 자세가 필요합니다.</p>
+            
+            <p>대물배상 범위는 가급적 최소 5억 원 혹은 10억 원 이상으로 넉넉히 가입할 것을 적극 추천합니다. 고가의 수입 세단이나 정비 단가가 값비싼 다른 고성능 전기 차량과의 다중 충돌 가능성을 전제한다면 가입 단계에서 불과 1만 원에서 2만 원 안팎의 적은 비용 추가만으로 보상 한도를 엄청나게 올릴 수 있기 때문입니다. 또한 배터리 전손 시 부품 감가상각 금액을 보상해 주지 않는 일반 약관의 한계를 보완해 주는 전기차 배터리 신품 가액 보상 특약은 단언컨대 필수적인 대비책이라 규정할 수 있습니다.</p>
+
+            <hr>
+
+            <h2>5. 실사용자 커뮤니티의 생생한 가입 후기와 채널별 정보 수집법</h2>
+            <p>스마트한 소비를 영위하는 전기차 오너들은 신규 인수 즉시 다양한 채널을 활용해 피드백을 공유하고 있습니다. 인터넷 포털 네이버 블로그나 카페의 검색 창에 내돈내산 가입 후기 등을 입력해보면 유용한 할인 팁이 대량 등장합니다. 또한 구글이나 유튜브, 트위터, 인스타그램, 페이스북과 같은 소셜 네트워크 서비스상에서도 수많은 이용자 정보가 실시간 교환되고 있습니다.</p>
+            
+            <p>특히 국내의 영향력 있는 온라인 광장인 디시인사이드 차갤, 보배드림 전기차 게시판, 에펨코리아(펨코)의 자동차 카테고리 등지에서는 손해보험사들의 마일리지 특약 환급률 및 모바일 제휴 상품권, 주유 사은품, 카드사 청구 할인 혜택 등 실제 체감되는 실질적인 금액 절감법에 대한 다양한 토론이 전개됩니다. 이러한 다양한 경험담은 최적의 싼곳을 가려내는 데 훌륭한 나침반 역할을 담당합니다. 최근에는 제미나이(Gemini), 챗지피티(ChatGPT)와 같은 진보된 AI 시스템을 활용하여 최신의 가입 요건을 세밀하게 대조해 보는 현명한 운전자들도 큰 폭으로 확대되고 있습니다.</p>
+
+            <hr>
+
+            <h2 id="insurance-calculator">6. 전기차 맞춤형 예상 보험료 산출 시뮬레이터 (무료 사전 분석)</h2>
+            <p>실제 본인이 타고자 하는 차량 사양과 핵심 연령, 가입 조건 변수를 입력하시면 최적의 추천 등급 및 예상 등락폭에 관한 정밀한 예측 결과를 시연해 드립니다. 아래의 모든 항목에 본인의 라이프 사이클을 정밀히 투영할수록 오차 범위가 한층 줄어듭니다.</p>
+
+            <div class="input-group">
+                <h3>차량 모델 및 인적 사항 필수 설정</h3>
+                
+                <label for="kia-model">기아 전기차 상세 차종 선택 (원하는 세부 모델을 정확히 지정할수록 정확도가 올라갑니다)</label>
+                <select id="kia-model" onchange="updateExpectedPremium()">
+                    <option value="">-- 기아 EV 차종을 골라주세요 --</option>
+                    <option value="ray">기아 신형 레이 EV (에어 / 라이트)</option>
+                    <option value="ev3">기아 EV3 (스탠다드 / 롱레인지)</option>
+                    <option value="ev5">기아 EV5 준중형 SUV (예정 포함)</option>
+                    <option value="niro">기아 니로 EV / 니로 플러스</option>
+                    <option value="soul">기아 쏘울 EV / 부스터 EV</option>
+                    <option value="ev6">기아 EV6 (롱레인지 / GT-line 포함)</option>
+                    <option value="ev6gt">기아 EV6 GT (초고성능 플래그십 라인)</option>
+                    <option value="ev9">기아 EV9 (에어 / 어스 패밀리 대형)</option>
+                    <option value="ev9gt">기아 EV9 GT-line / GT 고성능</option>
+                    <option value="bongo">기아 봉고3 EV (영업 및 다목적 특장)</option>
+                </select>
+
+                <label for="driver-min-age">주 운전자 만 연령대 설정</label>
+                <select id="driver-min-age" onchange="updateExpectedPremium()">
+                    <option value="21">만 21세 이상 한정 (할증 적용 가능성 높음)</option>
+                    <option value="24">만 24세 이상 한정</option>
+                    <option value="26">만 26세 이상 한정</option>
+                    <option value="30">만 30세 이상 한정 (평균적인 안정 요율 집입)</option>
+                    <option value="35" selected>만 35세 이상 한정 (우수 저렴 등급 도달)</option>
+                    <option value="43">만 43세 이상 부부 한정 (최저가 선호 구간)</option>
+                </select>
+
+                <label for="accident-history">최근 3개년 동안의 사고 이력 내역</label>
+                <select id="accident-history" onchange="updateExpectedPremium()">
+                    <option value="none" selected>최근 3년간 완전 무사고 (최대 할인 혜택 유지)</option>
+                    <option value="one">대물 혹은 자차 접수 1회 (소액 파손 건)</option>
+                    <option value="heavy">대인 접수 포함 혹은 단독 전손 사고 이력 있음</option>
+                </select>
+
+                <label for="tmap-score">티맵 및 카카오내비 안전 주행 점수 입력 (구간별 할인 연동)</label>
+                <input type="number" id="tmap-score" placeholder="예: 85 (없거나 측정이 어려우면 0 입력)" min="0" max="100" oninput="updateExpectedPremium()">
+
+                <label for="mileage-limit">연간 타깃 예상 총 주행거리 (km단위 입력)</label>
+                <input type="number" id="mileage-limit" placeholder="예: 8000 (마일리지 환급률 계산 목적)" min="0" oninput="updateExpectedPremium()">
+
+                <label for="special-request">기타 특별한 가입 희망 요청 조건 기재 (선택적 참고 사항)</label>
+                <textarea id="special-request" placeholder="예: 1인 한정 가입 예정, 대물 10억 확장 설계 원함, 신규 블랙박스 장착 할인율 조회 원함 등 자유롭게 기록해 보세요."></textarea>
+
+                <button type="button" class="cta-btn" style="width: 100%; border-radius: 8px;" onclick="calculatePremiumResult()">전기차 다이렉트 예상 요율 최종 리포트 출력</button>
+            </div>
+
+            <div id="calculator-result" class="result-box">
+                <h4 style="margin-top: 0; color: #065f46; font-size: 1.2em;">기아 EV 최적화 모의 시뮬레이션 진단서</h4>
+                <p id="calc-summary" style="font-weight: bold; font-size: 1.05em;"></p>
+                <p id="calc-range"></p>
+                <p id="calc-discount-tips" style="color: #047857; font-size: 0.95em;"></p>
+                <div style="margin-top: 15px; font-size: 0.85em; color: #4b5563; border-top: 1px solid #a7f3d0; padding-top: 10px;">
+                    위 시뮬레이션은 입력 정보를 바탕으로 산출한 모의 가상 분석이며, 각 금융사 채널의 공식 전산망 및 신규 프로모션 이벤트 사은품 제휴(카드사 캐시백, 현금지원 혜택 등)에 따라 실질 금액은 달라질 수 있습니다.
+                </div>
+            </div>
+
+            <script>
+                function updateExpectedPremium() {
+                    // 실시간 감지를 통한 데이터 흐름 체크용 (필요시 비동기 통신 연동)
+                }
+
+                function calculatePremiumResult() {
+                    const carModel = document.getElementById('kia-model').value;
+                    const age = parseInt(document.getElementById('driver-min-age').value);
+                    const accident = document.getElementById('accident-history').value;
+                    const tmapScore = parseInt(document.getElementById('tmap-score').value) || 0;
+                    const mileage = parseInt(document.getElementById('mileage-limit').value) || 15000;
+
+                    if (!carModel) {
+                        alert("분석 대상 기아 EV 차종을 명확히 선택해주셔야 정밀 분석이 실행됩니다.");
+                        return;
+                    }
+
+                    let basePrice = 1000000; // 기본 임시값
+                    let carName = "";
+
+                    switch(carModel) {
+                        case 'ray':
+                            basePrice = 750000;
+                            carName = "기아 레이 EV";
+                            break;
+                        case 'ev3':
+                            basePrice = 950000;
+                            carName = "기아 EV3";
+                            break;
+                        case 'ev5':
+                            basePrice = 1050000;
+                            carName = "기아 EV5";
+                            break;
+                        case 'niro':
+                            basePrice = 1000000;
+                            carName = "기아 니로 EV";
+                            break;
+                        case 'soul':
+                            basePrice = 900000;
+                            carName = "기아 쏘울 EV";
+                            break;
+                        case 'ev6':
+                            basePrice = 1200000;
+                            carName = "기아 EV6";
+                            break;
+                        case 'ev6gt':
+                            basePrice = 1600000;
+                            carName = "기아 EV6 GT";
+                            break;
+                        case 'ev9':
+                            basePrice = 1750000;
+                            carName = "기아 EV9";
+                            break;
+                        case 'ev9gt':
+                            basePrice = 2100000;
+                            carName = "기아 EV9 GT라인";
+                            break;
+                        case 'bongo':
+                            basePrice = 1300000;
+                            carName = "기아 봉고3 EV";
+                            break;
+                    }
+
+                    // 연령 조정 계수
+                    let ageFactor = 1.0;
+                    if (age === 21) ageFactor = 1.8;
+                    else if (age === 24) ageFactor = 1.4;
+                    else if (age === 26) ageFactor = 1.1;
+                    else if (age === 30) ageFactor = 1.0;
+                    else if (age === 35) ageFactor = 0.9;
+                    else if (age === 43) ageFactor = 0.85;
+
+                    // 사고이력 계수
+                    let accidentFactor = 1.0;
+                    if (accident === 'one') accidentFactor = 1.25;
+                    else if (accident === 'heavy') accidentFactor = 1.65;
+
+                    // 할인 정산
+                    let discountAmount = 0;
+                    let discountLabels = [];
+
+                    if (tmapScore >= 80) {
+                        discountAmount += 110000;
+                        discountLabels.push("티맵 우수점수 할인 우대 약 11% 차감");
+                    } else if (tmapScore >= 70) {
+                        discountAmount += 60000;
+                        discountLabels.push("티맵 중급점수 할인 우대 약 6% 차감");
+                    }
+
+                    if (mileage < 5000) {
+                        discountAmount += 180000;
+                        discountLabels.push("초저주행 마일리지 특약 환급 약 18% 감면 적용");
+                    } else if (mileage < 10000) {
+                        discountAmount += 100000;
+                        discountLabels.push("평균주행 구간 마일리지 특약 약 10% 감면 적용");
+                    }
+
+                    let finalEstimated = Math.round((basePrice * ageFactor * accidentFactor) - discountAmount);
+                    if (finalEstimated < 450000) finalEstimated = 450000; // 최저치 한계선 보정
+
+                    const resultBox = document.getElementById('calculator-result');
+                    const summaryEl = document.getElementById('calc-summary');
+                    const rangeEl = document.getElementById('calc-range');
+                    const tipsEl = document.getElementById('calc-discount-tips');
+
+                    summaryEl.innerHTML = carName + "를 타깃으로 설정한 예상 연간 다이렉트 평균 견적 안내입니다.";
+                    rangeEl.innerHTML = "당신이 얻을 수 있는 예상 최저가 밴드는 연간 약 " + finalEstimated.toLocaleString() + " 원 선에서 형성됩니다. (개인 신용, 사고경력, 요율 등급에 따라 변동 가능)";
+                    
+                    if (discountLabels.length > 0) {
+                        tipsEl.innerHTML = "적용 가능한 우수 혜택 요약: " + discountLabels.join(" / ");
+                    } else {
+                        tipsEl.innerHTML = "팁: 티맵 안전 운전 점수 향상 및 연간 주행거리 감축을 실천하시면 한층 더 저렴한곳 가입이 가능해집니다.";
+                    }
+
+                    resultBox.style.display = 'block';
+                    resultBox.scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
+
+            <hr>
+
+            <h2>7. 신규 계약 시 놓치기 쉬운 필수 사은 혜택과 이벤트 수령 가이드</h2>
+            <p>다이렉트 대면 및 비대면 채널을 비교하다 보면 보험사들이 고객 선점을 위해 펼치는 다채로운 신규 마케팅 활동을 접하게 됩니다. 연말연시나 각 분기별 가입 성수기에는 주유권 및 백화점 상품권 증정 프로모션을 활발히 집행하며, 특정 신용카드 파트너십 제휴를 통해 연간 납입금 결제 시 최대 3만 원의 청구 감면 또는 현금지원 캐시백 이벤트를 성황리에 펼치기도 합니다. 이와 같은 신규 혜택들은 소소하지만 전체 전기차 소모품 유지 비용을 확실하게 세이브할 수 있는 실질적 가치를 부여합니다.</p>
+            
+            <p>다만, 금융소비자보호법상 과도한 현금지원은 제한되어 있으므로 모바일 쿠폰, 하이패스 선불 충전금, 친환경 전동 세차 키트 등 각 보험사 홈페이지에서 공인하여 정직하게 보증 지급하는 안전 사은품 유형을 명확히 확보하시는 것이 현명합니다. 이와 더불어 손해보험협회가 제공하는 실시간 포털 연계를 거쳐 현재 적용되는 사은 규모를 사전 조회해보는 절차를 누트라(NUTRA) 시스템 혹은 포털 연동 정보로 꼭 관찰하시는 편을 적극 제안합니다.</p>
+
+            <hr>
+
+            <h2>8. 공신력 있는 참조 외부 채널 및 관련 전문 법적 소스 목록</h2>
+            <p>전기차 유지관리의 객관적인 기준 지표를 파악하고 싶으시거나 관련 손해율, 법규 동향에 대해 더욱 깊은 조사가 필요하실 경우 아래의 신뢰도 높은 공인 포털을 거쳐 신뢰할 수 있는 학술 연구 자료를 확인해 보세요.</p>
+            
+            <div class="external-links">
+                <a href="https://www.fss.or.kr/" target="_blank">금융감독원 (FSS) – 금융사 및 다이렉트 규제 사항 및 표준 약관 공시 안내</a>
+                <a href="https://www.kidi.or.kr/" target="_blank">보험개발원 (KIDI) – 자동차 요율 통계 수집 및 차량 사고 파손 수리 기준 정보망</a>
+                <a href="https://www.knia.or.kr/" target="_blank">손해보험협회 (KNIA) – 다이렉트 자동차 공시 요율 대조 및 소비자 권익 구제 센터</a>
+                <a href="https://www.law.go.kr/" target="_blank">국가법령정보센터 – 자동차손해배상 보장법 및 전기차 의무 법규</a>
+                <a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%20%EB%B3%B4%ED%97%98" target="_blank">나무위키 자동차 보험 문서 – 전반적인 제도적 이해와 입문 가이드</a>
+            </div>
+
+            <hr>
+
+            <div class="cta-box">
+                <h3>최적의 기아 EV 전기차 안심 보장을 향한 정직한 비교의 힘</h3>
+                <p>소중하게 선택한 기아 전기차가 불의의 상황에서도 소유주를 안전하게 보호할 수 있도록, 무작정 인기 가입 순위에만 연연하지 마시고 다각적인 할인 요인과 특약 실효성을 차분히 분석하는 합리적인 태도가 필요합니다. 지금 다이렉트 산출 시스템을 거쳐 나만의 견적 결과를 검토해 보세요.</p>
+                <a href="#insurance-calculator" class="cta-btn">🚘 내 맞춤 추천 및 견적 다시 시뮬레이션하기</a>
+            </div>
+
+        </div>
+    </section>
+
+  
